@@ -67,3 +67,7 @@ Pushing a `v*` tag builds and publishes a release through GitHub Actions.
 ## Notes
 
 Buzz uses Apple's private MultitouchSupport framework to drive the trackpad's haptic actuator, so a macOS update may break it.
+
+## License
+
+[MIT](LICENSE)
