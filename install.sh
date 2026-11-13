@@ -23,11 +23,10 @@ url="https://github.com/$REPO/releases/latest/download/$ASSET"
 if curl -fsSL "$url" -o "$tmp/$ASSET" 2>/dev/null; then
   :
 elif command -v gh >/dev/null 2>&1 && gh release download --repo "$REPO" --pattern "$ASSET" --dir "$tmp" 2>/dev/null; then
-  # The repository is private: fall back to the signed-in GitHub CLI.
+  # Direct download failed; the GitHub CLI succeeded.
   :
 else
-  echo "Could not download $ASSET from $REPO." >&2
-  echo "If the repository is private, sign in with the GitHub CLI (gh auth login) and try again." >&2
+  echo "Could not download $url" >&2
   exit 1
 fi
 

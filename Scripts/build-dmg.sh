@@ -13,7 +13,7 @@ cd "$(dirname "$0")/.."
 APP_NAME="buzz"
 DISPLAY_NAME="Buzz"
 BUNDLE_ID="${BUNDLE_ID:-io.github.2c2c.buzz}"
-VERSION="${VERSION:-0.1.1}"
+VERSION="${VERSION:-0.1.2}"
 CODESIGN_IDENTITY="${CODESIGN_IDENTITY:--}"
 
 DIST="dist"
